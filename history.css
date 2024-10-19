@@ -1,0 +1,181 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #4a235a);
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Center the navbar items */
+    background-color: rgba(0, 0, 0, 0.9); /* Darker semi-transparent background */
+    padding: 15px 0; /* Spacing around the navbar */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Increased shadow for depth */
+    border-bottom: 2px solid #f39c12; /* Bottom border for accent */
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px 25px; /* More spacing for each link */
+    font-size: 20px; /* Slightly larger font size */
+    font-weight: bold; /* Make links bold */
+    transition: background-color 0.4s ease, color 0.4s ease; /* Smooth transition for hover effects */
+    border-radius: 5px; /* Rounded corners for links */
+}
+
+.nav-link:hover {
+    background-color: #f39c12; /* Highlight color on hover */
+    color: #2c3e50; /* Darker text color on hover */
+}
+
+.nav-link.active {
+    background-color: #f39c12; /* Active link color */
+    color: #2c3e50; /* Darker text color for active link */
+}
+
+.history-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeIn 1s forwards;
+    max-height: 80vh; /* Adjusted height for better scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-logo {
+    width: 150px;
+    margin-bottom: 20px;
+    animation: logoAnimation 1s forwards;
+}
+
+@keyframes logoAnimation {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.history-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #f39c12;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.season h2 {
+    margin-top: 40px;
+    font-size: 28px;
+    color: #9b59b6;
+    border-bottom: 2px solid #f39c12;
+    padding-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.season h2:hover {
+    color: #e74c3c;
+}
+
+.competitions {
+    margin: 20px 0;
+}
+
+.competition {
+    font-size: 18px;
+    margin: 10px 0;
+    text-align: center;
+    color: #e74c3c;
+    transition: transform 0.3s ease;
+}
+
+.competition:hover {
+    transform: scale(1.05);
+}
+
+.awards-title {
+    margin-top: 30px;
+    font-size: 24px;
+    color: #9b59b6;
+}
+
+.awards-list {
+    list-style: none;
+    padding: 0;
+}
+
+.awards-list li {
+    font-size: 18px;
+    margin: 5px 0;
+    text-align: center;
+    color: #f39c12;
+    transition: color 0.3s ease;
+}
+
+.awards-list li:hover {
+    color: #e74c3c;
+}
+
+.more-info {
+    background-color: #9b59b6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.more-info:hover {
+    background-color: #8e44ad;
+    transform: translateY(-2px);
+}
+
+.more-info:active {
+    transform: translateY(0);
+}
+
+.season-info {
+    display: none; /* Hidden by default */
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Slight background for visibility */
+    border-radius: 10px;
+    transition: opacity 0.5s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .history-section h1 {
+        font-size: 28px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-link {
+        padding: 10px;
+        font-size: 18px;
+    }
+}

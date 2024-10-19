@@ -1,0 +1,202 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  background-color: #1a1a1a; /* Dark theme */
+  overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(26, 0, 38, 0.9); /* Semi-transparent dark purple */
+  padding: 20px;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #d5b3ff; /* Light Purple */
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffd700; /* Golden hover effect */
+}
+
+/* Home Section */
+#home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a;
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+}
+
+#home h1 {
+  font-size: 3rem;
+  color: #ffd700; /* Golden */
+}
+
+#home p {
+  font-size: 1.5rem;
+  color: #d5b3ff; /* Light Purple */
+  margin-top: 20px;
+}
+
+/* About Section */
+#about {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent; /* Transparent background */
+  text-align: center;
+  padding: 50px;
+}
+
+.about-text h1 {
+  font-size: 3.5rem;
+  color: #d5b3ff; /* Light Purple */
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+.about-text ul {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.about-text ul li {
+  font-size: 1.5rem;
+  color: #ffd700; /* Golden color */
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  color: #d5b3ff;
+  margin-top: 10px;
+}
+
+/* History Section */
+#history {
+  height: 100vh;
+  padding: 50px;
+  background-color: #2c2c2c;
+  color: #fff;
+  text-align: center;
+}
+
+#history h2 {
+  font-size: 2.5rem;
+  color: #ffd700;
+}
+
+#history p {
+  font-size: 1.3rem;
+  color: #d5b3ff;
+  margin-top: 20px;
+}
+
+/* Social Media Section */
+#social-media {
+  text-align: center;
+  margin: 50px 0;
+  animation: slideIn 1s forwards;
+}
+
+#social-media h2 {
+  font-size: 2.5rem;
+  color: #f39c12; /* Bright orange/golden */
+  margin-bottom: 30px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.social-item {
+  text-align: center;
+}
+
+.social-sticker {
+  width: 80px;
+  height: 80px;
+  background-size: contain; /* Show the full image */
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#youtube-sticker {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg');
+}
+
+#discord-sticker {
+  background-image: url('https://upload.wikimedia.org/wikipedia/en/9/98/Discord_logo.svg');
+}
+
+.social-sticker:hover {
+  transform: scale(1.1);
+}
+
+.social-item a {
+  display: block;
+  color: #d5b3ff; /* Light purple for links */
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+.social-item a:hover {
+  color: #ffd700; /* Golden hover effect */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(26, 0, 38, 0.9); /* Semi-transparent dark purple */
+  position: relative; /* Keep it at the bottom */
+  bottom: 0;
+  width: 100%;
+  color: #d5b3ff; /* Light Purple */
+}

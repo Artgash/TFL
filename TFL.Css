@@ -1,0 +1,117 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  background-color: #1a1a1a; /* Dark theme */
+  overflow-x: hidden;
+}
+
+/* Welcome Section */
+#welcome {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent; /* Transparent background */
+}
+
+.welcome-text {
+  text-align: center;
+  animation: fadeIn 3s ease-in-out forwards; /* Fade-in from invisible */
+}
+
+.welcome-text h1 {
+  font-size: 4rem;
+  color: #d5b3ff; /* Light Purple */
+}
+
+.logo {
+  width: 150px;
+  margin-top: 20px;
+  filter: brightness(1.5);
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(26, 0, 38, 0.9); /* Semi-transparent dark purple */
+  padding: 20px;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #d5b3ff; /* Light Purple */
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffd700; /* Golden hover effect */
+}
+
+/* Journey Section */
+#journey-begins {
+  padding: 60px 20px; /* Spacing around the section */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+  animation: slideIn 1s forwards; /* Animation for the new section */
+}
+
+.journey-content h2 {
+  font-size: 3rem;
+  color: #f39c12; /* Bright accent color for the title */
+  margin-bottom: 20px;
+}
+
+.journey-content p {
+  font-size: 1.5rem;
+  color: #d5b3ff; /* Light Purple */
+  margin: 10px 0;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Page section fade-in for new pages */
+.page-content {
+  opacity: 0;
+  animation: slideIn 1s forwards; /* New animation for page sections */
+}
+
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(26, 0, 38, 0.9); /* Semi-transparent dark purple */
+  position: relative; /* Keep it at the bottom */
+  bottom: 0;
+  width: 100%;
+  color: #d5b3ff; /* Light Purple */
+}
