@@ -7,33 +7,44 @@
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <!-- Welcome Section -->
-  <header id="welcome">
-    <div class="welcome-text">
-      <h1>Welcome to TFL</h1>
-      <img src="TFL_LOGO.png" alt="TFL Logo" class="logo"> <!-- Replace with your logo -->
-    </div>
-  </header>
 
   <!-- Navbar -->
   <nav>
     <ul>
+      <li><a href="index.html" class="nav-link">Home</a></li>
       <li><a href="about.html" class="nav-link">About Us</a></li>
       <li><a href="history.html" class="nav-link">History</a></li>
     </ul>
   </nav>
 
-  <!-- New Section: Down Where Your Journey Begins -->
+  <!-- Video Section with Text Overlay -->
+  <header id="video-header">
+    <div class="video-container">
+      <video autoplay muted loop playsinline id="background-video">
+        <source src="cachedVideo.mov" type="video/mp4"> <!-- Replace with your video path -->
+        Your browser does not support the video tag.
+      </video>
+      <div class="overlay-text">
+        <h1>Welcome to TFL</h1>
+        <p>Experience the thrill of Touch Football League like never before!</p>
+        <a href="#journey-begins" class="cta-button">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Journey Section -->
   <section id="journey-begins">
     <div class="journey-content">
-      <h2>Down Where Your Journey Begins</h2>
-      <p>Welcome to the start of an exciting adventure with TFL. Here, you will experience thrilling moments and unforgettable memories.</p>
-      <p>Join us as we explore the beautiful world of touch football together!</p>
+      <h2>Your Journey Begins Here</h2>
+      <p>Welcome to TFL. Discover exciting moments and create lasting memories.</p>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2024 Touch Football League. All rights reserved.</p>
   </footer>
+
+  <script src="index.js"></script>
 </body>
 </html>
