@@ -7,6 +7,14 @@ body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+/* Ensure all images are responsive */
+img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove unwanted bottom space under images */
+    margin: 0 auto; /* Center images horizontally */
+}
+
 .navbar {
     display: flex;
     justify-content: center; /* Center the navbar items */
@@ -177,5 +185,11 @@ body {
     .nav-link {
         padding: 10px;
         font-size: 18px;
+    }
+
+    /* Make sure images don't overflow on small screens */
+    img {
+        max-width: 90%;
+        height: auto;
     }
 }
