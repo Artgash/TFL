@@ -9,10 +9,7 @@
 body, html {
     height: 100%;
     background-color: black;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow-x: hidden;
 }
 
 /* Navbar */
@@ -22,8 +19,8 @@ body, html {
     position: fixed;
     top: 0;
     width: 100%;
-    text-align: center;
     z-index: 10;
+    text-align: center;
 }
 
 .nav-link {
@@ -42,33 +39,33 @@ body, html {
     color: #800080;
 }
 
-/* Centering Content */
+/* Centered Content */
 .centered-content {
     text-align: center;
+    max-width: 800px;
+    margin-top: 150px; /* Offset for fixed navbar */
     color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    animation: fadeIn 1.5s ease;
+    line-height: 1.6;
+}
+
+/* Logo Centered */
+.logo-container {
+    margin-bottom: 20px;
 }
 
 .main-logo {
     width: 150px;
     opacity: 0;
     transform: scale(0.8);
-    animation: logoAppear 2s ease forwards;
-    margin-bottom: 20px;
+    animation: logoFadeIn 1.5s ease forwards;
 }
 
-/* Text Styling */
+/* Promo Section Text */
 .promo-section h1 {
     font-size: 2.5rem;
     color: #FFD700;
     margin-bottom: 20px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: textSlideIn 2.5s ease forwards;
+    animation: slideIn 1.5s ease forwards;
 }
 
 .promo-section p,
@@ -76,7 +73,7 @@ body, html {
     margin-bottom: 20px;
     opacity: 0;
     transform: translateY(20px);
-    animation: textFadeIn 3s ease forwards;
+    animation: fadeInText 1s ease forwards;
 }
 
 .promo-section ul {
@@ -88,7 +85,7 @@ body, html {
     margin-bottom: 10px;
 }
 
-/* Media Section */
+/* Media Section on Right */
 .media-section {
     position: fixed;
     top: 150px;
@@ -127,24 +124,19 @@ body, html {
 }
 
 /* Keyframes for animations */
-@keyframes logoAppear {
+@keyframes logoFadeIn {
     0% { opacity: 0; transform: scale(0.8); }
     100% { opacity: 1; transform: scale(1); }
 }
 
-@keyframes textSlideIn {
-    0% { opacity: 0; transform: translateY(20px); }
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(-20px); }
     100% { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes textFadeIn {
+@keyframes fadeInText {
     0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
 }
 
 /* Footer */
@@ -154,4 +146,5 @@ footer {
     text-align: center;
     color: white;
     width: 100%;
+    position: relative;
 }
