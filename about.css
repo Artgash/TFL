@@ -8,7 +8,8 @@
 
 body, html {
     height: 100%;
-    background-color: black; /* Black background */
+    background-color: black;
+    overflow-x: hidden;
 }
 
 /* Navbar */
@@ -30,21 +31,40 @@ body, html {
 }
 
 .nav-link.active {
-    color: #FFD700; /* Gold highlight for the active page */
+    color: #FFD700;
 }
 
 .nav-link:hover {
-    color: #800080; /* Purple hover effect */
+    color: #800080;
+}
+
+/* Logo Container Animation */
+.logo-container {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.main-logo {
+    width: 150px;
+    opacity: 0;
+    transform: scale(0.5);
+    animation: logoFadeIn 1.5s ease forwards;
+}
+
+/* Logo animation keyframes */
+@keyframes logoFadeIn {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
 }
 
 /* Main content container */
 .content-container {
     display: flex;
-    margin-top: 70px; /* Offset for fixed navbar */
+    margin-top: 20px;
     padding: 20px;
 }
 
-/* Promo Section (Centered Content) */
+/* Promo Section (Center Content with Text Animations) */
 .promo-section {
     flex: 1;
     max-width: 60%;
@@ -52,25 +72,24 @@ body, html {
     color: white;
     line-height: 1.6;
     font-size: 1.1rem;
+    animation: fadeInText 1s ease forwards;
 }
 
 .promo-section h1 {
     font-size: 2.5rem;
-    color: #FFD700; /* Gold color for main title */
+    color: #FFD700;
     margin-bottom: 20px;
     text-align: center;
+    opacity: 0;
+    animation: slideIn 1.5s ease forwards;
 }
 
-.promo-section h2 {
-    font-size: 1.5rem;
-    color: #FFD700;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
+.promo-section h2,
 .promo-section p,
 .promo-section ul {
-    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInText 1s ease forwards;
 }
 
 .promo-section ul {
@@ -82,10 +101,21 @@ body, html {
     margin-bottom: 10px;
 }
 
-/* Fixed Social Media Section (Right Side) */
+/* Keyframes for text animations */
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInText {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Fixed Social Media Section on the Right */
 .social-media {
     position: fixed;
-    top: 100px; /* Below the navbar */
+    top: 100px;
     right: 20px;
     width: 200px;
     text-align: left;
@@ -98,7 +128,6 @@ body, html {
     margin-bottom: 20px;
 }
 
-/* Individual media links */
 .media-link {
     display: flex;
     align-items: center;
@@ -118,13 +147,12 @@ body, html {
     transition: color 0.3s ease;
 }
 
-/* Hover effects for social media */
 .media-link:hover .social-logo {
     transform: scale(1.2);
 }
 
 .media-link:hover a {
-    color: #FFD700; /* Gold hover effect */
+    color: #FFD700;
 }
 
 /* Footer */
