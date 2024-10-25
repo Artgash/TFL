@@ -11,7 +11,7 @@ body, html {
     background-color: black; /* Black background */
 }
 
-/* Navbar (Fixed at the top) */
+/* Navbar */
 .navbar {
     background-color: black;
     padding: 15px 30px;
@@ -37,36 +37,52 @@ body, html {
     color: #800080; /* Purple hover effect */
 }
 
-/* Content container with About Us scrolling section and fixed Social Media */
+/* Main content container */
 .content-container {
     display: flex;
     margin-top: 70px; /* Offset for fixed navbar */
     padding: 20px;
 }
 
-/* About Section (Centering Text Vertically and Horizontally) */
-.about-section {
+/* Promo Section (Centered Content) */
+.promo-section {
     flex: 1;
     max-width: 60%;
     padding: 20px;
     color: white;
-    overflow-y: auto;
-}
-
-.about-section h1 {
-    font-size: 3rem;
-    color: #FFD700; /* Gold color */
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.about-section p {
-    font-size: 1.2rem;
     line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.promo-section h1 {
+    font-size: 2.5rem;
+    color: #FFD700; /* Gold color for main title */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.promo-section h2 {
+    font-size: 1.5rem;
+    color: #FFD700;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.promo-section p,
+.promo-section ul {
     margin-bottom: 20px;
 }
 
-/* Fixed Social Media Section on the Right */
+.promo-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.promo-section ul li {
+    margin-bottom: 10px;
+}
+
+/* Fixed Social Media Section (Right Side) */
 .social-media {
     position: fixed;
     top: 100px; /* Below the navbar */
